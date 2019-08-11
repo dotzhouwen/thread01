@@ -21,6 +21,11 @@ public class CountDownLatchDemo implements Runnable {
         }
     }
 
+    /**
+     *
+     * @param args args
+     * @throws InterruptedException e
+     */
     public static void main(String[] args) throws InterruptedException {
         ExecutorService exec = Executors.newFixedThreadPool(10);
         for (int i = 0; i < 10; i++) {
@@ -30,4 +35,5 @@ public class CountDownLatchDemo implements Runnable {
         System.out.println("fire");
         exec.shutdown();
     }
+
 }
